@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+      <div class="item">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>เว็บเพจค่าฝุ่น PM2.5 จังหวัดลำพูน By Python</title>
+    <link href="https://fonts.googleapis.com/css?family=Bai+Jamjuree&display=swap" rel="stylesheet">
+    <style>
+    * {font-family: 'Bai Jamjuree', sans-serif;}
+    .btn{
+        background-image: linear-gradient(-90deg, #11998e, #38ef7d);
+        border-radius: 10px; 
+        color:white;
+        text-decoration:none;
+        padding:10px 20px;
+        display:block;
+        margin:0 auto;
+        max-width:200px;
+        text-align:center;
+        text-transform:uppercase;
+        font-weight:500;
+    }
+    /*h1 {
+        margin: 0px;
+        padding: 0px;
+    }*/
+    </style>
+</head>
+<body style="background-color: #073642;background-image: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(0,0,0,0.61) 61%, rgba(0,0,0,1) 100%),
+ url(https://i.imgur.com/BjBu2Sn.png);background-position: bottom;background-repeat:no-repeat;background-size: cover;background-attachment: fixed;">  
+    <h1 style="color:white;text-align: center;margin-top: 50px;padding: 0px;font-size: 3.4em">ค่าฝุ่น PM2.5 จังหวัดลำพูน</h1>
+    {% if  data.PM25 and data.PM10 and data.Co and data.AQI and data.Level %}
+    <div style="color:white;">
+        <h1 style="text-align: center;font-size: 10em;margin: 0px;">{{data.PM25}}</h1>
+        <h1 style="text-align: center;margin-top: -10px;">µg/m³</h1>
+        <!-- <h1 style="text-align: center;">{{data.temp}}</h1> -->
+        <center><div style="background-color: rgba(0,0,0,0.5);width: 500px;display: block;border-radius: 5px; padding: 10px;">
+          <table style="text-align: center;">
+            <tr>
+            <th colspan="2"><h5 style="margin-top: 30px;margin-bottom: 30px;"></h5> </th>
+            <th colspan="2"><h5 style="margin-top: 30px;margin-bottom: 35px;"></h5> </th>
+            </tr>
+            <tr>
+            <th><h5 style="margin: 10px;font-size: 16px;padding: 3px">ค่าของ PM10</h5></th>
+            <th><h5 style="margin: 10px;font-size: 16px;padding: 3px">ค่าของ Co</h5></th>
+            <th><h5 style="margin: 10px;font-size: 16px;padding: 3px">ค่าของ AQI</h5></th>
+            <th><h5 style="margin: 10px;font-size: 16px;padding: 3px">Level</h5></th>
+            </tr>
+            <tr>
+            <td><h5 style="margin: 5px;">{{data.PM10}} µg/m³</h5></td>
+            <td><h5 style="margin: 5px;">{{data.Co}} ppm</h5></td>
+            <td><h5 style="margin: 5px;">{{data.AQI}} µg/m³</h5></td>
+            <td><h5 style="margin: 5px;">{{data.Level}}</h5></td>
+            <tr>
+            <th colspan="2"><h5 style="margin-top: 15px;margin-bottom: 0px;"></h5></th>
+            </tr>
+            <tr>
+            <td colspan="2"><h5 style="margin: 5px;"></h5></td>
+            <td colspan="2"><h5 style="margin: 5px;"></h5></td>
+            </tr>
+
+          </table>  
+    </div>
+    {% endif %}
+<center style="margin-top: 10px;"><small style="color: gray;">&copy;  สื่อการสอนการเขียนเว็บเพจโดยใช้python เพื่อนักศึกษาเทคนิคลำพูน</small></center>
+</body>
+</html>
+
+
